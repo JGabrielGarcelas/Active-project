@@ -11,6 +11,8 @@
     /* ── RESET & TOKENS ──────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html, body { overflow-x: hidden; }
+
     :root {
       --brand-yellow: #e3ef0b;
       --brand-yellow-dark: #cfe010;
@@ -401,11 +403,60 @@
     }
 
     /* ── RESPONSIVE ───────────────────────────────── */
+    /* ── MOBILE ───────────────────────────────────── */
     @media (max-width: 700px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-cta-card { width: 100%; }
-      .two-col, .bio-grid { grid-template-columns: 1fr; }
-      .bio-images { flex-direction: row; }
+
+      /* Hero */
+      .hero { padding: 3rem 1.2rem 2.5rem; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .hero h1 { font-size: 1.8rem; }
+      .hero-cta-card { width: 100%; min-width: unset; padding: 1.5rem 1.2rem 1.2rem; }
+
+      /* Section labels */
+      .section-label { font-size: 1.1rem; }
+
+      /* Two-col & bio grid: single column */
+      .two-col { grid-template-columns: 1fr; gap: 2rem; }
+      .bio-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+      /* Bio images: side by side, smaller */
+      .bio-images {
+        flex-direction: row;
+        gap: .75rem;
+      }
+      .bio-images img { width: 50%; }
+      .img-placeholder { min-height: 140px; font-size: .7rem; }
+
+      /* Pain grid: 1 column */
+      .pain-grid { grid-template-columns: 1fr; }
+
+      /* Benefits grid: 1 column */
+      .benefits-grid { grid-template-columns: 1fr; }
+
+      /* Sections padding */
+      section { padding: 2.5rem 1.2rem; }
+      .benefits-section { padding: 2.5rem 1.2rem; }
+      .cta-section { padding: 3rem 1.2rem; }
+
+      /* Highlight boxes */
+      .highlight-box { padding: 1rem; }
+      .delivery-paras p { padding: .9rem 1rem; }
+      .bio-text-block p { padding: .9rem 1rem; }
+
+      /* CTA button full width */
+      .btn-primary { display: block; width: 100%; text-align: center; padding: 1rem 1rem; }
+
+      /* Fix left-aligned section label on mobile */
+      .services-section .section-label { text-align: center !important; }
+
+      /* Pain section intro text */
+      .body-text { text-align: left; }
+
+      /* Services list */
+      .services-list { margin-top: 1rem; }
     }
   </style>
 </head>
