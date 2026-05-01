@@ -181,8 +181,8 @@
 
     .btn-whatsapp {
       display: block;
-      width: 100%;
-      padding: .9rem 1.5rem;
+      width: 50%;
+      padding: 0.9rem 1.5rem;
       background: #c97a8a;
       color: var(--white);
       font-family: var(--font-body);
@@ -192,14 +192,19 @@
       letter-spacing: .03em;
       border-radius: 2px;
       transition: background .2s, transform .15s;
+      position: relative;
+      left: -10%;
     }
     .btn-whatsapp:hover { background: black; color: white; transform: translateY(-1px); }
 
     .cta-note {
       margin-top: .75rem;
       font-size: .75rem;
-      color: rgba(255,255,255,0.5);
+      color: rgba(0, 0, 0 ,0.5);
       line-height: 1.5;
+      position: relative;
+      left: 42%;
+      top: -5vh;
     }
 
     /* ── SECTION WRAPPER ──────────────────────────── */
@@ -522,8 +527,6 @@
       /* CTA button full width */
       .btn-primary { display: block; width: 100%; text-align: center; padding: 1rem 1rem; }
 
-      .btn-whatsapp {position: relative; left: 20%;}
-
       /* Fix left-aligned section label on mobile */
       .services-section .section-label { text-align: center !important; }
 
@@ -532,6 +535,10 @@
 
       /* Services list */
       .services-list { margin-top: 1rem; }
+
+      .btn-whatsapp {position: relative; left: -0%; width: 100%;}
+
+      .cta-note {position: relative; left: 25%; top: -3vh;}
     }
   </style>
 </head>
@@ -562,8 +569,8 @@
            target="_blank" rel="noopener noreferrer">
           Solicitar análise
         </a>
-        <p class="cta-note">Retorno rápido e direto para<br>análise de orçamento.</p>
       </div>
+      <p class="cta-note">Retorno rápido e direto para<br>análise de orçamento.</p>
       <p class="section-label">O cálculo não é detalhe.<br>É o que define o valor do processo</p>
       <p class="body-text">
         Um cálculo mal elaborado pode gerar impugnações, atrasos e até perda financeira.
