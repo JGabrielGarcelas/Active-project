@@ -9,25 +9,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="icon" href="https://nataliacalculostrabalhistas.com/wp-content/uploads/2026/03/cropped-1774870574696-32x32.png" sizes="32x32">
   <style>
-    /* ── RESET & TOKENS ──────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html, body { overflow-x: hidden; }
 
     :root {
-      /* ── Paleta Rosa / Natália ── */
-      --rose-gold:       #c97a8a;   /* rosa principal                 */
-      --rose-gold-light: #e0a0b0;   /* rosa claro / hover             */
-      --rose-gold-dark:  #9e5060;   /* rosa escuro / bordas           */
-      --cream:           #fdf0f2;   /* creme rosado                   */
-      --cream-dark:      #f5dde2;   /* creme rosado mais escuro       */
-      --sage:            #8aac8a;   /* verde sage das folhas          */
-      --blush:           #e8b4bc;   /* blush suave                    */
-      --warm-dark:       #2d1a1e;   /* quase preto rosado             */
-      --warm-mid:        #7a3d4a;   /* vinho médio                    */
-      --off-white:       #fff8f9;   /* branco levemente rosado        */
+      --rose-gold:       #c97a8a;
+      --rose-gold-light: #e0a0b0;
+      --rose-gold-dark:  #9e5060;
+      --cream:           #fdf0f2;
+      --cream-dark:      #f5dde2;
+      --sage:            #8aac8a;
+      --blush:           #e8b4bc;
+      --warm-dark:       #2d1a1e;
+      --warm-mid:        #7a3d4a;
+      --off-white:       #fff8f9;
 
-      /* aliases funcionais */
       --brand-yellow:      var(--rose-gold);
       --brand-yellow-dark: var(--rose-gold-dark);
       --black:             var(--warm-dark);
@@ -41,7 +38,6 @@
       --gap: 2rem;
     }
 
-    /* ── BASE ──────────────────────────────────────── */
     body {
       font-family: var(--font-body);
       font-size: 15px;
@@ -51,7 +47,6 @@
       overflow-x: hidden;
     }
 
-    /* Grain texture overlay */
     body::before {
       content: '';
       position: fixed;
@@ -68,7 +63,6 @@
       padding-inline: 1.5rem;
     }
 
-    /* ── HERO ──────────────────────────────────────── */
     .hero {
       background-image: url('https://github.com/JGabrielGarcelas/Active-project/blob/main/background.jpeg?raw=true'); background-size: cover; background-position: center;
       color: var(--white);
@@ -162,7 +156,52 @@
       left: 65%;
     }
 
-    /* CTA card */
+    .fa-brands{
+      color: white;
+      z-index: 10;
+      animation: icon 0.3s ease-in-out infinite;
+    }
+
+    .insta {
+      width: 100px;
+      height: 30px;
+      background: var(--rose-gold);
+      color: white;
+      font-family: var(--font-body);
+      border-radius: 5px;
+      border: 1px solid black;
+      cursor: pointer;
+      margin: 15px;
+    }
+
+    .email-btn {
+      width: 100px;
+      height: 30px;
+      background: var(--rose-gold);
+      color: white;
+      font-family: var(--font-body);
+      border-radius: 5px;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+
+    .fa-instagram {
+      animation: none;
+      position: relative;
+      left: -3px
+    }
+
+    @keyframes instabtn {
+      0% {opacity: 0%;}
+
+      100% {opacity: 100%;}
+    }
+
+    @keyframes icon {
+      0% {opacity: 0%;}
+      100% {opacity: 100%;}
+    }
+
     .hero-cta-card {
       display: flex;
       justify-content: center;
@@ -183,7 +222,7 @@
       display: block;
       width: 50%;
       padding: 0.9rem 1.5rem;
-      background: #c97a8a;
+      background: #25D366;
       color: var(--white);
       font-family: var(--font-body);
       font-size: .88rem;
@@ -191,11 +230,15 @@
       text-decoration: none;
       letter-spacing: .03em;
       border-radius: 2px;
-      transition: background .2s, transform .15s;
+      animation: background 0.3s ease-in-out infinite; 
       position: relative;
       left: -10%;
     }
-    .btn-whatsapp:hover { background: black; color: white; transform: translateY(-1px); }
+     
+    @keyframes background {
+      0% {opacity: 0%;}
+      100% {opacity: 100%;}
+    }
 
     .cta-note {
       margin-top: .75rem;
@@ -207,7 +250,6 @@
       top: -5vh;
     }
 
-    /* ── SECTION WRAPPER ──────────────────────────── */
     section { padding: 4rem 1.5rem; }
     section + section { padding-top: 0; }
 
@@ -222,6 +264,17 @@
       color: var(--black);
     }
 
+    .other-cta {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 20px;
+      color: var(--white);
+    }
+
     .body-text {
       font-size: .88rem;
       line-height: 1.75;
@@ -229,7 +282,6 @@
       color: #222;
     }
 
-    /* ── PAIN SECTION ─────────────────────────────── */
     .pain-section { background: var(--off-white); border-top: 3px solid var(--rose-gold); }
 
     .pain-grid {
@@ -256,7 +308,6 @@
       margin-bottom: .4rem;
     }
 
-    /* ── SERVICES ─────────────────────────────────── */
     .services-section { background: var(--cream); }
 
     .two-col {
@@ -282,7 +333,6 @@
       font-weight: 500;
     }
 
-    /* ── BENEFITS ─────────────────────────────────── */
     .benefits-section { background: var(--warm-dark); padding: 4rem 1.5rem; }
     .benefits-section .section-label { color: var(--white); }
 
@@ -328,7 +378,6 @@
       list-style: none;
     }
 
-    /* ── BIO ──────────────────────────────────────── */
     .bio-section { background: var(--off-white); padding: 4rem 1.5rem; }
 
     .bio-grid {
@@ -410,7 +459,6 @@
       padding: 2rem 1rem;
     }
 
-    /* ── DETAIL / RISK ────────────────────────────── */
     .detail-section { background: var(--cream); }
 
     .highlight-box {
@@ -423,7 +471,6 @@
       margin-top: 1rem;
     }
 
-    /* ── DELIVERY ─────────────────────────────────── */
     .delivery-section { background: var(--off-white); }
 
     .delivery-paras p {
@@ -435,7 +482,6 @@
       margin-bottom: .8rem;
     }
 
-    /* ── CTA FINAL ────────────────────────────────── */
     .cta-section {
       background: linear-gradient(135deg, #2d1a1e 0%, #7a3d4a 100%);
       color: var(--white);
@@ -453,6 +499,11 @@
       margin-inline: auto;
     }
 
+    .fa-lg {
+      position: relative;
+      left: 7%;
+    }
+
     .btn-primary {
       display: inline-block;
       padding: 1rem 2.8rem;
@@ -465,9 +516,13 @@
       text-transform: uppercase;
       text-decoration: none;
       border: 1px solid var(--black);
-      transition: background .2s, transform .15s;
+      animation: icon 0.3s ease-in-out infinite;
     }
-    .btn-primary:hover { background: var(--rose-gold-light); transform: translateY(-2px); }
+
+    @keyframes icon2 {
+      0% {opacity: 0%;}
+      100% {opacity: 100%;}
+    }
 
     .cta-footer-note {
       margin-top: 1rem;
@@ -475,11 +530,8 @@
       color: rgba(255,255,255,.4);
     }
 
-    /* ── RESPONSIVE ───────────────────────────────── */
-    /* ── MOBILE ───────────────────────────────────── */
     @media (max-width: 700px) {
 
-      /* Hero */
       .hero { padding: 10rem 1.2rem 2.5rem; background-image: url('https://github.com/JGabrielGarcelas/Active-project/blob/main/background.jpeg?raw=true'); background-size: cover;}
 
       .hero-tag{position: relative; left: 20%; top: -13vh; }
@@ -495,48 +547,45 @@
       .hero h1 { font-size: 1.8rem; }
       .hero-cta-card { width: 80%; min-width: unset; padding: 1.5rem 1.2rem 1.2rem; left: 10%; bottom: -10%;}
 
-      /* Section labels */
       .section-label { font-size: 1.1rem; }
 
-      /* Two-col & bio grid: single column */
       .two-col { grid-template-columns: 1fr; gap: 2rem; }
       .bio-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 
-      /* Bio left: column */
       .bio-left { gap: 1rem; }
       .bio-img-secondary { min-height: 220px; }
       .bio-img-primary { min-height: 320px; }
       .img-placeholder { min-height: 160px; font-size: .7rem; }
 
-      /* Pain grid: 1 column */
       .pain-grid { grid-template-columns: 1fr; }
 
-      /* Benefits grid: 1 column */
       .benefits-grid { grid-template-columns: 1fr; }
 
-      /* Sections padding */
       section { padding: 2.5rem 1.2rem; }
       .benefits-section { padding: 2.5rem 1.2rem; }
       .cta-section { padding: 3rem 1.2rem; }
 
-      /* Highlight boxes */
       .highlight-box { padding: 1rem; }
       .delivery-paras p { padding: .9rem 1rem; }
       .bio-text-block p { padding: .9rem 1rem; }
 
-      /* CTA button full width */
       .btn-primary { display: block; width: 100%; text-align: center; padding: 1rem 1rem; }
 
-      /* Fix left-aligned section label on mobile */
       .services-section .section-label { text-align: center !important; }
 
-      /* Pain section intro text */
       .body-text { text-align: left; }
 
-      /* Services list */
       .services-list { margin-top: 1rem; }
 
       .btn-whatsapp {position: relative; left: -0%; width: 100%;}
+
+      .fa-brands { position: relative; left: 35px;}
+
+      .fa-lg { position: relative; left: -43%; bottom: -40px;}
+
+      .fa-instagram {
+        position: relative; left: -3px;
+      }
 
       .cta-note {position: relative; left: 25%; top: -3vh;}
     }
@@ -544,7 +593,6 @@
 </head>
 <body>
 
-  <!-- ══ HERO ════════════════════════════════════ -->
   <header class="hero">
     <div class="hero-inner">
       <div>
@@ -560,10 +608,10 @@
     </div>
   </header>
 
-  <!-- ══ PAIN ════════════════════════════════════ -->
   <section class="pain-section">
     <div class="container">
       <div class="hero-cta-card">
+        <i class="fa-brands fa-whatsapp"></i>
         <a class="btn-whatsapp"
            href="https://api.whatsapp.com/send?phone=5551985120936&text=Oi%2C%20encontrei%20suas%20informa%C3%A7%C3%B5es%20do%20WhatsApp%20no%20seu%20site."
            target="_blank" rel="noopener noreferrer">
@@ -586,7 +634,6 @@
     </div>
   </section>
 
-  <!-- ══ SERVICES ════════════════════════════════ -->
   <section class="services-section">
     <div class="container">
       <div class="two-col">
@@ -611,7 +658,6 @@
     </div>
   </section>
 
-  <!-- ══ BENEFITS ════════════════════════════════ -->
   <section class="benefits-section">
     <div class="container">
       <p class="section-label">Mais do que números, você recebe segurança</p>
@@ -640,13 +686,11 @@
     </div>
   </section>
 
-  <!-- ══ BIO ═════════════════════════════════════ -->
   <section class="bio-section">
     <div class="container">
       <p class="section-label">Quem está por trás dos cálculos:</p>
       <div class="bio-grid">
 
-        <!-- COLUNA ESQUERDA: texto + foto do caderno embaixo -->
         <div class="bio-left">
           <div class="bio-text-block">
             <p>
@@ -662,10 +706,9 @@
               trazendo mais segurança para advogados e evitando prejuízos para seus clientes.
             </p>
           </div>
-          <!-- Foto 2 (caderno) ocupa o espaço restante da coluna -->
           <div class="bio-img-secondary">
             <img
-              src="https://nataliacalculostrabalhistas.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-01-at-19.58.06-1-837x1024.jpeg"
+              src="https://garcelaspericia-smlfd.wpcomstaging.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-01-at-19.58.06-1-837x1024.jpeg"
               alt="Caderno Natália Garcelas"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
               class="img-secondary"
@@ -674,10 +717,9 @@
           </div>
         </div>
 
-        <!-- COLUNA DIREITA: retrato em altura total -->
         <div class="bio-img-primary">
           <img
-            src="https://nataliacalculostrabalhistas.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-02-at-11.25.34-681x1024.jpeg"
+            src="https://garcelaspericia-smlfd.wpcomstaging.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-02-at-11.25.34-681x1024.jpeg"
             alt="Foto de Natália Garcelas"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
             class="img-primary"
@@ -689,7 +731,6 @@
     </div>
   </section>
 
-  <!-- ══ DETAIL ══════════════════════════════════ -->
   <section class="detail-section">
     <div class="container">
       <p class="section-label">Um detalhe que muda tudo</p>
@@ -701,7 +742,6 @@
     </div>
   </section>
 
-  <!-- ══ DELIVERY ════════════════════════════════ -->
   <section class="delivery-section">
     <div class="container">
       <p class="section-label">Redução de risco e segurança nos detalhes</p>
@@ -726,7 +766,6 @@
     </div>
   </section>
 
-  <!-- ══ CTA FINAL ═══════════════════════════════ -->
   <section class="cta-section">
     <div class="container">
       <p class="section-label">Próximo passo</p>
@@ -734,6 +773,7 @@
         Se você precisa de cálculos confiáveis e bem fundamentados,
         o próximo passo é simples:
       </p>
+      <i class="fa-brands fa-whatsapp fa-lg"></i>
       <a class="btn-primary"
          href="https://wa.me/5551985120936"
          target="_blank" rel="noopener noreferrer">
@@ -742,8 +782,15 @@
       <p class="cta-footer-note">
         Atendimento direto pelo WhatsApp · Análise de orçamento personalizada
       </p>
+      <p class="other-cta">Outros meios de contato</p>
+      <div class="instagram">
+      <button class="insta" onclick=""><i class="fa-brands fa-instagram"></i>Instagram</button>
+      </div>
+      <div class="email">
+        <button class="email-btn" onclick=""><i class="fa-regular fa-envelope"></i>Email:</button>
+      </div>
     </div>
   </section>
-
 </body>
+  <script src="https://kit.fontawesome.com/54f0f3f7c3.js" crossorigin="anonymous"></script>
 </html>
