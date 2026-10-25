@@ -436,6 +436,7 @@
       background: var(--glass-light);
       border-left: 3px solid var(--rose-gold);
       padding: 1rem 1.2rem;
+      margin: 9.5%;
       font-size: .88rem;
       line-height: 1.7;
       text-align: justify;
